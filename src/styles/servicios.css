@@ -1,0 +1,181 @@
+/*contenedor del componente*/
+.servicios{
+    width: 100%;
+    height: 70vh;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*tarjeta de servicio*/
+.servicios-card{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('src/assets/servicios.webp');
+    background-position: center;
+    background-size: cover;
+    border-radius: 7px;
+}
+
+/*contenedor de titulo y subtitulo*/
+.servicios-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--blanco);
+    padding: 2.5rem;
+    border-radius: 3.5px;
+    background-color: rgb(23, 23, 23, 0.5);
+}
+
+/*titulo*/
+.servicios-card h2{
+    font-family: var(--title);
+    font-size: clamp(3rem, 2rem + 2.0833vw, 4.5rem);
+    font-weight: 400;
+    color: var(--blanco);
+    text-align: center;
+}
+
+/*linea*/
+.servicios-content .line{
+    width: 700px;
+    height: 2px;
+    background: var(--gradient);
+}
+
+/*subtitulo*/
+.servicios-card h4{
+    font-family: var(--text);
+    font-size: clamp(1.4rem, 1.2rem + 0.4167vw, 1.7rem);
+    color: var(--blanco);
+}
+
+/*diseño responsive*/
+@media (max-width: 1440px) {
+    
+    .servicios{
+        padding: 3rem;
+    }
+
+    .servicios-card{
+        width: 100%;
+        max-height: 500px;
+    }
+
+    .servicios-content .line{
+        width: 600px;
+        height: 2px;
+    }
+ 
+}
+
+@media (max-width: 1250px) {
+
+    .servicios{
+        padding: 3rem 1.5rem;
+    }
+
+    .servicios-card{
+        max-height: 400px;
+    }
+
+    .servicios-content{
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 1250px) {
+
+    .servicios-content{
+        gap: 1rem;
+    }
+
+    .servicios-content h2{
+        font-size: 2.5rem;
+    }
+
+    .servicios-content h4{
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .servicios{
+        padding: 5rem 0;
+    }
+
+    .servicios-card{
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    .servicios-content{
+        padding: 1.5rem;
+        gap: 0.8rem;
+    }
+
+    .servicios-content h2{
+        font-size: 2.2rem;
+    }
+
+    .servicios-content h2 br{
+        display: none;
+    }
+
+    .servicios-content h2{
+        max-width: 480px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    .servicios-content .line{
+        width: 400px;
+        height: 2px;
+    }
+
+    .servicios-content h4{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .servicios{
+        padding: 5rem 0;
+    }
+    
+    .servicios-card{
+        width: 100%;
+        max-height: 100%;
+        height: 100%;
+    }
+
+    .servicios-content h2{
+        font-size: 1.8rem;
+        max-width: 100%;
+    }
+
+    .servicios-content .line{
+        width: 300px;
+        height: 2px;
+    }
+
+    .servicios-content h4{
+        font-size: 1.2rem;
+        max-width: 300px;
+    }
+}

@@ -1,0 +1,359 @@
+/*contenedor del componente*/
+.contacto{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*contenedor con logo, texto y links a los canales de contacto*/
+.contacto .data{
+    height: 100%;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 0 5rem;
+}
+
+/*logo*/
+.data .logo{
+    justify-self: flex-start;
+    width: 180px;
+    height: auto;
+}
+
+.data .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*texto*/
+.data h5{
+    font-family: var(--text);
+    font-size: clamp(1rem, 0.8rem + 0.4167vw, 1.3rem);
+    max-width: 800px;
+}
+
+/*contenedor de iconos y links de contacto*/
+.data .info{
+    font-family: var(--text);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1rem 0;
+}
+
+/*columnas*/
+.data .info .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 1.5rem;
+}
+
+.data .info .col div{
+    min-height: 50px;
+}
+
+/*iconos*/
+.data .info img{
+    width: 30px;
+    height: auto;
+}
+
+/*link de contacto*/
+.data .info a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+}
+
+.data .info p{
+    font-family: var(--title);
+    font-size: clamp(0.9rem, 0.7667rem + 0.2778vw, 1.1rem);
+    font-weight: 600;
+    color: var(--negro);
+}
+
+/*linea*/
+.data .line{
+    height: 2px;
+    width: 100%;
+    background: var(--gradient);
+    margin-bottom: 1rem;
+}
+
+/*copyright*/
+.data .copy{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: var(--text);
+    font-size: clamp(0.7rem, 0.5rem + 0.4167vw, 1rem);
+    color: var(--negro);
+}
+
+.data .copy p br{
+    display: none;
+}
+
+.data .copy p a{
+    font-family: var(--title);
+    text-decoration: none;
+    color: var(--verde);
+    font-weight: 600;
+}
+
+/*formulario de contacto*/
+.contacto form{
+    padding: 3rem;
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+    background: var(--verde);
+}
+
+/*contenedor de titulo y texto en formulario*/
+.form-title{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+/*titulo*/
+.form-title h4{
+    font-family: var(--title);
+    font-size: clamp(2.5rem, 1.8333rem + 1.3889vw, 3.5rem);
+    font-weight: 400;
+    color: var(--blanco);
+}
+
+/*texto*/
+.form-title p{
+    font-family: var(--text);
+    font-size: clamp(1rem, 0.8667rem + 0.2778vw, 1.2rem);
+    font-weight: 400;
+    color: var(--blanco);
+}
+
+/*contenedor de datos que se ingresan al formulario*/
+.form-data{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/*información personal del cliente*/
+.personal-data{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.form-data input{
+    width: 100%;
+    padding: 0.5rem;
+    background: rgb(248, 243, 240, 0.4);
+    border: none;
+    color: var(--blanco);
+    font-size: 1rem;
+}
+
+.form-data input::placeholder{
+    width: 100%;
+    color: var(--blanco);
+    font-family: var(--text);
+    font-size: clamp(0.9rem, 0.8333rem + 0.1389vw, 1rem);
+}
+
+/*elimina interfaz predeterminada para el input number donde se ingresa el número de teléfono*/
+/* Para Chrome, Safari, Edge (WebKit) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*seleccinar motivo del contacto*/
+.form-data select{
+    width: 100%;
+    background: rgb(248, 243, 240, 0.4);
+    padding: 0.5rem;
+    color: var(--blanco);
+    font-family: var(--text);
+    font-size: clamp(0.9rem, 0.8333rem + 0.1389vw, 1rem);
+}
+
+/*color de opciones al desplegar*/
+.form-data option{
+    color: var(--negro);
+}
+
+/*color del texto "Motivos del contacto"*/
+.form-data select::placeholder{
+    color: var(--blanco);
+}
+
+/*Mensaje del cliente*/
+.form-data textarea{
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+    max-height: 200px;
+    min-height: 200px;
+    height: 200px;
+    background: rgb(248, 243, 240, 0.4);
+    border-radius: 5px;
+    font-family: var(--text);
+    font-size: clamp(0.9rem, 0.8333rem + 0.1389vw, 1rem);
+    padding: 1rem;
+    color: var(--blanco);
+}
+
+.form-data textarea::placeholder{
+    font-family: var(--text);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--blanco);
+}
+
+/*botón para envio del formulario*/
+.contacto form button{
+    font-family: var(--title);
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    border: none;
+    background: var(--amarillo);
+    color: var(--negro);
+    cursor: pointer;
+}
+
+/*diseño responsive*/
+@media (max-width: 1440px){
+
+    .data .logo img{
+        width: 130px;
+        height: auto;
+    }
+
+    .contacto .data{
+        padding: 1rem 2rem;
+        gap: 1rem;
+    }
+
+    .data .info img{
+        width: 25px;
+        height: auto;
+    }
+
+    .data .info{
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+
+
+    .contacto form{
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 1025px){
+
+    .contacto{
+        min-height: fit-content;
+        flex-direction: column-reverse;
+        padding: 0rem;
+        padding-bottom: 1rem;
+        gap: 3rem;
+    }
+
+    .contacto .data{
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .contacto form{
+        width: 100%;
+    }
+
+    .contacto form h4{
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 768px){
+
+    .contacto .data{
+        gap: 1.5rem;
+    }
+
+    .contacto form{
+        padding: 1.5rem;
+    }
+
+    .contacto form h4{
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 510px){
+
+    .contacto form{
+        padding: 1rem;
+    }
+    
+    .contacto form p{
+        font-size: 1.1rem;
+        max-width: 300px;
+    }
+
+    .contacto .data .info{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .contacto .data .info .col{
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px){
+
+    .contacto .data h5{
+        font-size: 1rem;
+        max-width: 92%;
+    }
+
+    .contacto .data .copy p br{
+        display: flex;
+    }
+
+    .contacto .data .copy p{
+        font-size: 0.9rem;
+    }
+}

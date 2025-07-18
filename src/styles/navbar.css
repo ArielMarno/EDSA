@@ -1,0 +1,133 @@
+/*component container*/
+.navbar{
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    background: transparent;
+    height: 100px;
+    padding: 0 5rem;
+    padding-top: 1rem;
+}
+
+/*main container*/
+.navbar main{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*dev name*/
+.navbar picture{
+    width: 140px;
+    height: auto;
+}
+
+.navbar picture img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/*links container*/
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+/*links*/
+nav a{
+    text-decoration: none;
+    font-family: var(--text);
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--negro);
+    transition: all ease-in-out 0.3s;
+}
+
+/*hover effect*/
+nav a:hover{
+    color: var(--amarillo);
+    transition: all ease-in-out 0.3s;
+}
+
+
+/*responsive menu*/
+.burguer{
+    display: none;
+}
+
+
+/*responsive desing*/
+@media (max-width: 1440px){
+    
+    .navbar{
+        padding: 0 3rem;
+        padding-top: 1rem;
+    }
+}
+
+@media (max-width: 1250px){
+    
+    .navbar{
+        padding: 1rem 2rem;
+    }
+}
+
+@media (max-width: 1025px){
+
+    .navbar{
+        padding: 1rem;
+        background: var(--verde);
+        position: fixed;
+        top: 0;
+        min-width: 100%;
+        height: 80px;
+        z-index: 999;
+    }
+
+    .navbar picture img{
+        width: 100px;
+        height: auto;
+    }
+
+    nav a, nav section p{
+        color: var(--blanco);
+        font-size: 1.2rem;
+    }
+
+    /*show menu*/
+    .burguer{
+        display: flex;
+    }
+
+    /*hide and active menu with .open class linked to funtion onClick*/
+    .menu{
+        position: fixed;
+        transform: translateX(-100%); 
+        transition: transform 0.3s initial;
+        top: 0;
+        left: 0;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    /*open menu*/
+    .menu.open {
+        background: var(--verde);
+        z-index: 1000;
+        transform: translateX(0);
+        position: fixed;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        left: 0;
+        top: 80px;
+    }
+}

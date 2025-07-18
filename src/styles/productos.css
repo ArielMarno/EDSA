@@ -1,0 +1,245 @@
+/*contenedor del componente*/
+.productos{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1.5rem;
+    background-color: var(--verde);
+}
+
+/*contenedor del titulo, imagenes, texto y botón*/
+.productos .content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 3rem 1.5rem;
+}
+
+/*titulo*/
+.content h2{
+    font-family: var(--title);
+    font-size: clamp(2.5rem, 0.7821rem + 2.6816vw, 4rem);
+    font-weight: 400;
+    color: var(--blanco);
+}
+
+/*linea*/
+.productos-line{
+    height: 3px;
+    width: 200px;
+    background: var(--gradient);
+}
+
+/*texto*/
+.content p{
+    font-family: var(--text);
+    font-size: clamp(1.1rem, 0.8709rem + 0.3575vw, 1.3rem);
+    color: var(--blanco);
+    max-width: 700px;
+    text-align: center;
+}
+
+.content p span{
+    font-family: var(--title);
+}
+
+/*texto sumar*/
+.sumar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.content .sumar h4{
+    font-family: var(--title);
+    font-size: clamp(1.3rem, 1.0709rem + 0.3575vw, 1.5rem);
+    font-weight: 500;
+    color: var(--blanco);
+}
+
+/*botón*/
+.sumar a{
+    text-decoration: none;
+    font-family: var(--title);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--negro);
+    background: var(--amarillo);
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    border: 0;
+    transition: all ease-in-out 0.5s;
+}
+
+/*contenedor de productos*/
+.content .motivos{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 3rem;
+    margin: 1rem 0;
+}
+
+.content .motivos div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/*contenedor de imagen*/
+.motivos picture{
+    width: 170px;
+    height: auto;
+}
+
+/*imagen*/
+.motivos picture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*descripción debajo de la imagen*/
+.motivos h4{
+    font-family: var(--title);
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: var(--blanco);
+}
+
+/*contenedor de video*/
+.productos aside{
+    position: relative;
+    width: 50%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*video edsa*/
+.productos aside video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 1440px){
+
+    .productos .content{
+        gap: 1rem;
+        padding: 3rem 1rem;
+    }
+
+    .content .motivos{
+        gap: 2rem;
+    }
+
+    .motivos picture{
+        width: 140px;
+        height: auto;
+    }
+
+    .sumar a{
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 1295px){
+     .content p{
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 1250px){
+
+    .motivos picture{
+        width: 100px;
+        height: auto;
+    }
+
+    .motivos h4{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1025px){
+
+    .productos{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .productos .content{
+        width: 100%;
+    }
+
+    .productos aside{
+        min-height: auto;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 768px){
+
+    .productos .content{
+        padding: 5rem 1rem;
+    }
+
+    .content h2{
+        font-size: 2.2rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    .content p{
+        font-size: 1.1rem;
+        max-width: 600px;
+    }
+
+    .motivos h4{
+        font-size: 0.9rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px){
+
+    .productos .content{
+        padding: 5rem 0.7rem;
+    }
+    
+    .content h2{
+        font-size: 1.9rem;
+    }
+
+    .motivos h4{
+        font-size: 0.7rem;
+    }
+
+    .content p{
+        max-width: 100%;
+        font-size: 1rem;
+    }
+
+    .content .sumar h4{
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .sumar a{
+        font-size: 1.2rem;
+    }
+}

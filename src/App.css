@@ -1,0 +1,55 @@
+
+@font-face {
+  font-family: 'Neo-sans-std';
+  src: url('../src/fonts/neo-sans-std/Neo\ Sans\ Std\ Regular.otf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Biryani';
+  src: url('../src/fonts/biryani/Biryani-Regular.ttf') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+:root {
+  
+  /*variables para tipografia*/
+  --title: 'Neo-sans-std', sans-serif;
+  --alt: 'Neo-sans-std-medium', sans-serif;
+  --text: 'Biryani', sans-serif;
+
+  /*variables para colores*/
+  --negro: #171717;
+  --blanco:  #F8F3F0;
+  --verde: #007447;
+  --amarillo: #F1CC02;
+  --gradient: linear-gradient(86deg, rgba(0, 116, 71, 1) 0%, rgba(241, 204, 2, 1) 100%);
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#007447), to(#007447));
+  background-image: -webkit-linear-gradient(bottom, #007447 0%, #007447 100%);
+  background-image: linear-gradient(to top, #007447 0%, #007447 100%);
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #F8F3F0;
+}

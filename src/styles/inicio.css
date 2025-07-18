@@ -1,0 +1,206 @@
+/*contenedor del componente*/
+.inicio{
+    width: 100%;
+    min-height: 100vh;
+}
+
+/*titulo principal*/
+.inicio-title{
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-left: 5rem;
+}
+
+/*titulo*/
+.inicio-title h1{
+    z-index: 1;
+    color: var(--negro);
+    font-family: var(--title);
+    font-size: clamp(4rem, 1rem + 3.3333vw, 5rem);
+    font-weight: 500;
+    line-height: 10vh;
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+/*linea*/
+.inicio-title_line{
+    position: relative;
+    height: 3px;
+    width: 200px;
+    background: var(--gradient);
+    margin: 0.5rem 0;
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+/*subtitulo*/
+.inicio-title h4{
+    position: relative;
+    font-family: var(--text);
+    font-size: clamp(1.3rem, 0.7rem + 0.6667vw, 1.5rem);
+    font-weight: 400;
+    max-width: 750px;
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.inicio-title h4 span{
+    font-style: italic;
+    font-weight: 450;
+}
+
+/*botón conocenos*/
+.inicio-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 0;
+    outline: 0px;
+    color: var(--negro);
+    width: 200px;
+    padding: 9px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/*aceite*/
+.liquid{
+    background-color: var(--amarillo);
+    width: 200px;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-shadow: inset 5px -5px 25px #ffee33,
+    inset -5px 0px 25px #ffee33;
+}
+
+.liquid::after {
+    content: '';
+    width: 450px;
+    height: 400px;
+    background: rgb(248, 243, 240, 0.7);
+    z-index: 1;
+    position: absolute;
+    left: -110px;
+    top: -380px;
+    border-radius: 45%;
+    animation: animate 5s linear 2s infinite;
+}
+
+.liquid::before {
+    content: '';
+    width: 450px;
+    height: 400px;
+    background-color: #ffe500;
+    z-index: 1;
+    position: absolute;
+    left: -110px;
+    top: -380px;
+    border-radius: 40%;
+    animation: animate 5s linear 1.8s infinite;
+}
+
+/*texto botón*/
+.btn-txt {
+    position: relative;
+    z-index: 1;
+    font-size: 1.5rem;
+    font-family: var(--title);
+    font-weight: 400;
+}
+
+.inicio .slider-rsp{
+    display: none;
+}
+
+/*animacion del botón*/
+@keyframes animate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*diseño responsive*/
+@media (max-width: 1440px){
+
+    .inicio-title{
+        padding: 0 3rem;
+    }
+
+    .inicio-title h1{
+        font-size: clamp(3rem, 0.5301rem + 3.8554vw, 4rem);
+        line-height: 10vh;
+    }
+
+    .inicio-title h4{
+        max-width: 450px;
+    }
+
+    .inicio-btn{
+        width: 150px;
+    }
+
+    .btn-txt{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 1250px){
+    .inicio h1{
+        line-height: 7vh;
+    }
+}
+
+@media (max-width: 1025px){
+
+    .inicio .slider{
+        display: none;
+    }
+
+    .inicio .slider-rsp{
+        display: flex;
+    }
+
+    .inicio h1{
+        font-size: clamp(2.5rem, 1.0058rem + 3.1128vw, 3rem);
+        color: var(--blanco);
+        font-weight: 600;
+        letter-spacing: 1px;
+        line-height: 6vh;
+    }
+
+    .inicio h4{
+        color: var(--blanco);
+        font-size: 1.3rem;
+    }
+
+    .inicio-title{
+        padding: 1rem;
+    }
+
+    .liquid::after {
+        background: rgb(248, 243, 240, 0.7);
+    }
+
+}
+
+@media (max-width: 480px){
+    .inicio h1{
+        font-size: clamp(2rem, 1.0058rem + 2.1128vw, 2.5rem);
+        line-height: 5vh;
+    }
+}

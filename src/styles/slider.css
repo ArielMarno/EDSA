@@ -1,0 +1,26 @@
+.fade-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Asegura que no sobrepase */
+  overflow: hidden;
+  z-index: 0;
+}
+
+.fade-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Hace que la imagen se adapte sin deformarse */
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+.fade-slide.visible {
+  opacity: 1;
+  z-index: 1;
+}
