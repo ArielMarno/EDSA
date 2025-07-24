@@ -39,7 +39,7 @@ const Productos = () => {
                 <h4>Bidón 10 Litros</h4>
             </div>
         </div>
-        <p data-aos="fade-right">Comercializamos aceite refinado 100% girasol marca EDSA, virgen y comestible, prensado en frío sin solventes ni otros agregados. Regulado y aprobado por las organizaciones competentes.<br /><span>RNE: 02-042.561  RNPA: 02-739185.</span></p>
+        <p data-aos="fade-right">Comercializamos aceite refinado 100% girasol marca EDSA. Regulado y aprobado por las organizaciones competentes.<br /><span>RNE: 02-042.561  RNPA: 02-739185.</span></p>
         <div className='sumar'>
           <h4 data-aos="fade-right">¿Querés sumar nuestro aceite a tu comercio?</h4>
             <a href="https://wa.link/lh2a8m"><span>CONTACTANOS</span></a> 

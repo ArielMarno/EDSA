@@ -15,9 +15,9 @@ const Inicio = () => {
           <h1 data-aos="zoom-in">CALIDAD E INNOVACIÓN <br />EN CADA PROCESO</h1>
           <div className='inicio-title_line' data-aos="zoom-in"></div>
           <h4 data-aos="zoom-in">Envasado y distribución de aceite refinado <span>100% de girasol</span> destinado principalmente al canal gastronómico.</h4>
-          <a href='https://wa.link/lh2a8m' class="inicio-btn">
-            <span class="liquid"></span>  
-            <span class="btn-txt">CONOCENOS</span>
+          <a href='https://wa.link/lh2a8m' className="inicio-btn">
+            <span className="liquid"></span>  
+            <span className="btn-txt">CONOCENOS</span>
           </a>
         </div>
       </div>
